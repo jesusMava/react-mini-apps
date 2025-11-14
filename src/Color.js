@@ -1,7 +1,7 @@
 import React from "react";
 import StarRating from "./StarRating";
 import { FaTrash } from "react-icons/fa";
-
+import { useInput } from "./hooks/useInput";
 const Color = ({ id, title, color, rating, onRemove = f => f, onRate = f => f }) => {
   return (
     <section>

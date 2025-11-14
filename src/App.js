@@ -4,6 +4,8 @@ import StarRating from './StarRating';
 import colorData from './color-data.json';
 import { useState } from 'react';
 import ColorList from './ColorList';
+import AddColorForm from './AddColorForm';
+import { v4 } from 'uuid';
 
 function App() {
   const [colors, setColors] = useState(colorData)
@@ -34,6 +36,14 @@ function App() {
             setColors(newColors)
           }}
         />
+
+        <AddColorForm onNewColor={
+          (title, color) => {
+            const newColor = [...colors, {id: v4(), title, color, rating: 0}]
+            setColors(newColor)
+          }
+        }/>
+        
       </header>
 
     </div>
