@@ -20,29 +20,9 @@ function App() {
           onDoubleClick={e => alert("Double clicked!")}
         />
 
-        <ColorList
-          colors={colors}
-          onRemoveColor={(id) => {
-            const newColor = colors.filter(color => color.id !== id)
-            setColors(newColor)
-          }}
-          onRate={(id) =>{
-            setColors({...colors, id: {raiting: id}})
-          }}
-          onRateColor={(id, rating) => {
-            const newColors = colors.map(color =>
-              color.id === id ? { ...color, rating } : color
-            )
-            setColors(newColors)
-          }}
-        />
+        <ColorList />
 
-        <AddColorForm onNewColor={
-          (title, color) => {
-            const newColor = [...colors, {id: v4(), title, color, rating: 0}]
-            setColors(newColor)
-          }
-        }/>
+        <AddColorForm />
         
       </header>
 

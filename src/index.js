@@ -1,13 +1,20 @@
-import React from 'react';
+import React, { createContext } from 'react';
+import colors from './color-data.json';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import ColorProvider from './providers/colorProvider';
+
+//es importante exportar el contexto para poder usarlo en otros archivos
+// export const ColorContext = createContext();
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <ColorProvider>
+      <App />    
+    </ColorProvider>
   </React.StrictMode>
 );
 
