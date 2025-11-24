@@ -7,8 +7,6 @@ const AddColorForm = () => {
   const [colorProps, resetColor] = useInput("#000000");
   const { addColor } = useColors();
 
-  console.log("useInput")
-  console.log(useInput)
   const submit = (e) => {
     e.preventDefault();
     addColor(titleProps.value, colorProps.value);

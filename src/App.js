@@ -6,6 +6,7 @@ import { useState } from 'react';
 import ColorList from './ColorList';
 import AddColorForm from './AddColorForm';
 import { v4 } from 'uuid';
+import CheckBox from './Checkbox';
 
 function App() {
   const [colors, setColors] = useState(colorData)
@@ -15,14 +16,15 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
           and save to reload.
-        <StarRating totalStars={5} 
+          <CheckBox />
+        {/* <StarRating totalStars={5} 
           style={{backgoundColor: "lightblue"}}
           onDoubleClick={e => alert("Double clicked!")}
         />
 
         <ColorList />
 
-        <AddColorForm />
+        <AddColorForm /> */}
         
       </header>
 
