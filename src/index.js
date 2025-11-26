@@ -1,24 +1,48 @@
-import React, { createContext } from 'react';
-import colors from './color-data.json';
+// import React, { createContext } from 'react';
+// import colors from './color-data.json';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import ColorProvider from './providers/colorProvider';
+// import './index.css';
+// import App from './App';
+// import reportWebVitals from './reportWebVitals';
+// import ColorProvider from './providers/colorProvider';
 
-//es importante exportar el contexto para poder usarlo en otros archivos
-// export const ColorContext = createContext();
+// //es importante exportar el contexto para poder usarlo en otros archivos
+// // export const ColorContext = createContext();
+
+// const root = ReactDOM.createRoot(document.getElementById('root'));
+// root.render(
+//   <React.StrictMode>
+//     <ColorProvider>
+//       <App />    
+//     </ColorProvider>
+//   </React.StrictMode>
+// );
+
+// // If you want to start measuring performance in your app, pass a function
+// // to log results (for example: reportWebVitals(console.log))
+// // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+// reportWebVitals();
+
+
+import React from "react";
+import { render } from "react-dom";
+import App from "./App";
+import { BrowserRouter as Router } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+// render(
+//   <Router>
+//     <App />
+//   </Router>,
+// document.getElementById("root")
+// );
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <ColorProvider>
+    <Router>
       <App />    
-    </ColorProvider>
+    </Router>
   </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
